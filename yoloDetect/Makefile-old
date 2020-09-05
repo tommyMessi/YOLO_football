@@ -1,0 +1,26 @@
+CC = g++
+#VPATH = .
+#SRCS = $(wildcard *.cpp)  $(wildcard *.c)
+
+INC =  -L /usr/local/cuda-7.5/lib64
+cflags = -I ../src -I ../yoloDetect -I /usr/local/cuda-7.5/include
+
+SRCS = yolo_console_dll.cpp yD.cpp
+OBJS = *.o 
+
+#INC = -L ../Bin -L /usr/local/cuda-7.5/lib64
+#cflags = -I ../src -I ../yoloDetect -I /usr/local/cuda-7.5/include
+
+LIBRARY = yolo-test
+
+C_FLAGS =-g -O3  -lpthread -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_legacy ../Bin/libtest.a -lcuda -lcudart -lcublas -lcurand
+
+
+${LIBRARY}: ${SRCS}
+	$(CC) $(SRCS) $(C_FLAGS) -o $(LIBRARY) $(INC) $(cflags)
+	cp $(LIBRARY) ../Bin/
+
+clean:
+	rm  $(LIBRARY) 
+
+	

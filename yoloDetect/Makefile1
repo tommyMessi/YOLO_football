@@ -1,0 +1,21 @@
+CC = g++
+#VPATH = .
+#SRCS = $(wildcard *.cpp)
+SRCS =   *.cpp
+OBJS = *.o 
+
+INC = -L ../Bin -L /usr/local/cuda-7.5/lib64 -L ./
+cflags = -I ../src -I /usr/local/cuda-7.5/include
+
+LIBRARY = libyD.so
+
+C_FLAGS =-g -O3  ../Bin/libtest.a -fno-inline  -lpthread -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_legacy -lcuda -lcudart -lcublas -lcurand
+ 
+${LIBRARY}: ${SRCS}
+	$(CC) $(SRCS) $(C_FLAGS) -fPIC --shared -O2  -g -o $(LIBRARY) $(INC) $(cflags)
+	cp $(LIBRARY) ../Bin/
+
+
+clean:
+	rm  $(LIBRARY) 
+

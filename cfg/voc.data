@@ -1,0 +1,6 @@
+classes= 3
+train  = /home/huluwa/darknet/2012_train.txt
+valid  = /home/huluwa/darknet/2012_test.txt
+names = data/voc.names
+backup = backup
+
