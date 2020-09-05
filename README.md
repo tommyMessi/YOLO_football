@@ -4,8 +4,8 @@
 ### This project is based on darknet YOLO to develop a football video analysis model, which contains more than 4000 annotated training data sets of players and footballs, and pre-training models。
 
 ### B站视频地址
--https://www.bilibili.com/video/BV17a4y1j72p
--https://www.bilibili.com/video/BV1gK411K7uw
+- https://www.bilibili.com/video/BV17a4y1j72p
+- https://www.bilibili.com/video/BV1gK411K7uw
 
 ## 环境(Requirements)
 ```参考darknet caffe配置 https://pjreddie.com/darknet/yolo/```
@@ -18,9 +18,9 @@
 
 ## 数据集(dataset)
 
-链接: https://pan.baidu.com/s/15JGCpAlMLRSY9dsfurSTWQ 提取码: bjex 
+- 链接: https://pan.baidu.com/s/15JGCpAlMLRSY9dsfurSTWQ 提取码: bjex 
 ![dataset](https://github.com/tommyMessi/YOLO_football/blob/master/image/data_img.png)
-网盘为原数据，需要自行转caffe需要的格式。
+- 网盘为原数据，需要自行转caffe需要的格式。
 
 ## 可视化实例
 ### 例子🌰1
